@@ -1,0 +1,45 @@
+body{
+    color: #DCDCDC; 
+    margin:auto; 
+}
+.all{
+    width: 1000px; 
+    margin:auto; 
+}
+.header{
+    width: 1000px; 
+    height: 100px; 
+    background: #483D8B; 
+}
+.header h1{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.panel-left,
+.panel-right{
+    width: 200px; 
+    height: 600px; 
+    background: #708090; 
+    padding: 20px; 
+    float: left;
+}
+
+.panel-center{
+    background: lightgrey; 
+    padding: 20px; 
+    float: left;
+    width: 480px;
+    height: 600px; 
+}
+
+.footer{
+    width: 1000px; 
+    height: 50px; 
+    background: #004d66; 
+    clear: both;
+}
+
+a{
+    text-decoration: none; 
+}
