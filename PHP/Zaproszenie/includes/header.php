@@ -1,0 +1,1 @@
+<h1>Logo sklepu lub banner</h1>

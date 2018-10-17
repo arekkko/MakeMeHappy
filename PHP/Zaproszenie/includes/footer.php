@@ -1,0 +1,1 @@
+<span>&copy; Created by Arek 2018</span>
