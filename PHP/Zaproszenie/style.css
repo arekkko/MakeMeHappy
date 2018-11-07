@@ -1,0 +1,87 @@
+/* 
+TABLE OF CONTENT 
+
+1. Gallery
+2. .small-gallery
+3. blocks
+4. menu
+*/
+
+body{
+    font-family: Arial; 
+    margin: 0 auto; 
+}
+/* 1. Gallery */ 
+.gallery{
+    width: 500px; 
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+.gallery .gallery-item{ 
+    width:150px; 
+    height: 150px; 
+    margin:2px; 
+    float: left; 
+}
+.gallery img{
+    overflow: hidden;
+    width: 100%; 
+    height: 100%; 
+}
+
+/* 2. .small-gallery */ 
+.small-gallery{
+    margin-top:20px; 
+}
+.small-gallery img{
+    width:220px; 
+    max-height: 400px; 
+}
+
+/* 3. blocks */ 
+.block-right, .block-left, .block-center{
+    float:left; 
+}
+.block-right, .block-left{
+    width:30%; 
+}
+
+.block-center{
+    width:40%; 
+    padding-bottom: 40px;
+}
+
+footer{ 
+    clear:both;
+    background: black; 
+    font-size:14px; 
+    padding:20px; 
+    margin-top:20px; 
+    color:#fff; 
+}
+
+/* 4. menu */ 
+a {
+    color:red; 
+    transition: 0.2s; 
+    text-decoration: none; 
+}
+a:hover{
+    color:green; 
+}
+ul li{
+    list-style-type:none; 
+}
+ul li a{
+    padding-top:10px; 
+    padding-bottom:10px; 
+}
+
+.logo-page{
+    margin: auto;
+    display: block;
+    width: 280px;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+

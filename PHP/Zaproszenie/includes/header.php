@@ -1,0 +1,1 @@
+<img src="img/logo_galeria.png" alt="Logo galerii" class="logo-page" />
