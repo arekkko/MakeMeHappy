@@ -26,10 +26,16 @@
                     $sentencje2 = explode("\n", $sentencje); 
                     
    
+<<<<<<< HEAD
                     $i = 1; 
                 foreach($sentencje2 as $sentencja): ?>
                     <?php  echo $i . '. ' .  $sentencja; ?><br><br>
                     <?php $i++; ?>
+=======
+                    
+                foreach($sentencje2 as $sentencja): ?>
+                    <?php  echo $sentencja; ?><br><br>
+>>>>>>> d5ad333500430e0b2c804139eca3f51e9e8fd5ca
                 <?php endforeach; ?>
                 </div>
             </article>

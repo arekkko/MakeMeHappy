@@ -13,6 +13,7 @@ $pictures = [
     2 => [
         'filePath'  => 'logo_og.png', 
         'alt'       => 'ZSL JEST DOBRE'
+<<<<<<< HEAD
     ], 
     3 => [
         'filePath'  => 'obraz_olejny.jpg', 
@@ -27,4 +28,7 @@ $pictures = [
         'alt'       => 'Obraz ukazujący krajobraz jesienny'
     ], 
     
+=======
+    ]
+>>>>>>> d5ad333500430e0b2c804139eca3f51e9e8fd5ca
 ]; 

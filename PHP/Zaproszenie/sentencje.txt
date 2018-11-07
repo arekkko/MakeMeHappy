@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Raz tylko w życiu kochamy raz tylko szczerze i trwale.
 Być może istnieją czasy piękniejsze, ale te są nasze
 Jedyną miarą miłości jest miłość bez miary
@@ -8,3 +9,8 @@ Tylko dla miłości nie ma przeszkód
 Moje życiowe plany kochać i być kochanym
 Miłość jest najwyższym sensem istnienia.
 Biel Twojej sukni buty Twe czarne i frak harmonia w nas.
+=======
+Sentencja to jest
+Sentencja to jest 2
+Sentencja to jest 3
+>>>>>>> d5ad333500430e0b2c804139eca3f51e9e8fd5ca

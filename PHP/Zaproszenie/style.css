@@ -48,7 +48,10 @@ body{
 
 .block-center{
     width:40%; 
+<<<<<<< HEAD
     padding-bottom: 40px;
+=======
+>>>>>>> d5ad333500430e0b2c804139eca3f51e9e8fd5ca
 }
 
 footer{ 
@@ -76,6 +79,7 @@ ul li a{
     padding-top:10px; 
     padding-bottom:10px; 
 }
+<<<<<<< HEAD
 
 .logo-page{
     margin: auto;
@@ -85,3 +89,5 @@ ul li a{
     margin-top:20px;
 }
 
+=======
+>>>>>>> d5ad333500430e0b2c804139eca3f51e9e8fd5ca
