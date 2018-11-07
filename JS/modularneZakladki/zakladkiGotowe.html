@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.wrapper-buttons{
+	margin-left: 5px; 
+	margin-bottom:-2px;
+}
+.wrapper-buttons .button{
+	display: inline-block; 
+	border:1px solid brown; 
+	border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+	padding:7px;
+	padding-left:10px; 
+	padding-right:10px; 
+	background: #ffc107; 
+    position: relative; 
+    z-index: 2; 
+}
+.button.active{
+	border-bottom:none;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+    background: #ffe699; 
+}
+.button{
+	position:relative; 
+	z-index:1; 
+    border-bottom: 0; 
+}
+.button a{
+	padding-left: 40px; 
+	padding-right: 40px; 
+}
+.button a{ 
+	text-decoration:none;
+	color:black; 
+}
+.wrapper-font-size .letter:hover{
+	cursor:pointer; 
+}
+
+.wrapper-font-size {
+	font-size:12px; 
+}
+.text-section{
+	background: #ffe699; 
+	border-radius:5px; 
+	border:1px solid brown; 
+	padding:15px;
+	position:relative; 
+	z-index:1; 
+}
+.text-section h1{
+	font-size:1.4rem;
+}
+.opcja{
+	display:none; 
+}
+.opcja.active{
+	display:block; 
+}
+</style>
+</head>
+<body>
+<div class="wrapper-buttons">
+		<div class="button">
+			<a href="#opcja1">Opcja 1</a>
+		</div>
+		<div class="button">
+			<a href="#opcja2">Opcja 2</a>
+		</div>
+		<div class="button">
+			<a href="#opcja3">Opcja 3</a>
+		</div>
+</div>
+
+<div class="text-section">
+	<div id="text">
+		<div class="opcja" id="opcja1">
+			<h1>Opcja 1 - Jakis tam tytul</h1>
+			<p>Nunc odio odio, venenatis id nibh vitae, viverra pretium ligula. Ut blandit nec dui sit amet malesuada. In vestibulum dictum lorem in scelerisque. Suspendisse potenti. Nulla dignissim augue in turpis consectetur, fermentum lobortis augue imperdiet.</p>
+		</div>
+		<div class="opcja" id="opcja2">
+			<h1>Opcja 2 - Jakis tam tytul</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dui nisl, dictum ut lectus at, laoreet lacinia odio. Donec ac libero ac tortor sodales pulvinar. Etiam vel mollis felis. Integer urna nisi, euismod sit amet bibendum sed, porta quis dui. Donec pharetra massa sit amet nunc congue, ac ornare leo scelerisque. Nunc odio odio, venenatis id nibh vitae, viverra pretium ligula. Ut blandit nec dui sit amet malesuada. In vestibulum dictum lorem in scelerisque. Suspendisse potenti. Nulla dignissim augue in turpis consectetur, fermentum lobortis augue imperdiet.</p>
+		</div>
+		<div class="opcja" id="opcja3">
+			<h1>Opcja 3 - Jakis tam tytul</h1>
+			<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	let allTrigger = document.getElementsByClassName('button'); 
+	let textSection = document.getElementsByClassName('opcja');
+	
+	allTrigger[0].classList.add('active'); 
+	textSection[0].classList.add('active'); 
+	
+	for(let i=0; i<allTrigger.length; i++)
+	{
+		allTrigger[i].onclick = function(){
+            
+			for(let k=0; k<allTrigger.length; k++)
+			{
+				allTrigger[k].classList.remove('active')
+			}
+			
+			this.classList.add('active'); 
+			
+			let textSectionAll = document.getElementsByClassName('opcja');
+			
+			for(let k=0; k<textSectionAll.length; k++)
+			{
+				textSectionAll[k].classList.remove('active')
+			}
+            
+            let temp = i +1; 
+            
+			let element = document.getElementById('opcja'+temp)
+			
+            element.classList.add('active'); 
+
+		}; 
+	}
+	
+</script>
+</body>
+</html>
