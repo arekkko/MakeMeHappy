@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+    <!-- Napisz stronę wyświetlającą okno z Twoim nazwiskiem. Następnie okno proszące o podanie klasy, następnie okno pytające czy masz na imię Arek. Po potwierdzeniu ma się wykonywać skrypt po niepotwierdzeniu ma się pokazać odpowiedni komunikat na stornie.
+    
+
+    Skrypt ma sczytywać z  pola tekstowego numer z dziennika oraz odpowiedzi na postawione pytania. 
+
+    Pyt1. – Tak / Nie (dwa radio)
+    Pyt2  - Dwa checkboxy
+
+    Ok. 
+
+    -->
+
+    <div id="quiz" style="display: none">
+        <input type="number" placeholder="Numer z dziennika" id="numerDziennika" /><br>
+
+        Czy słońce jest zielone?<br>
+        <input type="radio" name="pytaniePierwsze" class="pytaniePierwsze" value="Tak"/>Tak<br>
+        <input type="radio" name="pytaniePierwsze" class="pytaniePierwsze" value="Nie"/>Nie<br><br>
+
+        Jakiego koloru jest trawa?<br>
+        <input type="checkbox" id="pytanieDrugie" value="Zielona" />Tak<br>
+        <input type="checkbox" id="pytanieDrugie" value="Rozowa" />Nie
+
+        <input type="submit" id="wyslij" />
+    </div>   
+    
+    <script>/*
+    alert("Kopczyński"); 
+    let klasa = prompt('Podaj proszę klasę', '4B1T'); 
+    let czyArek = confirm('Czy masz na imię Arek?'); 
+     
+    
+    if(!czyArek)
+        document.write('Niestety nie masz na imię Arek. Nie mogę wykonać skryptu'); 
+    else 
+        pokazForm(); 
+     */   
+    pokazForm(); 
+    
+    function pokazForm(){
+        let quiz = document.getElementById('quiz'); 
+        
+        quiz.style.display = 'block'; 
+    }
+        
+    let trigger = getEleId('wyslij'); 
+        
+    trigger.onclick = function(){
+          skrypt(); 
+    }
+        
+    function skrypt(){
+        
+        let form = new Object(); 
+        
+        form.numer = getEleId('numerDziennika').value; 
+        
+        let pyt1 = document.getElementsByClassName('pytaniePierwsze'); 
+        
+          
+        let odpowiedzPytaniePierwsze;
+        
+        for(let i=0; i<=pyt1.length; i++){ 
+            if(pyt1[i].checked){
+                form.pyt1  = pyt1[i].value;
+                alert(form.pyt1);
+                return 0; 
+            }  
+        }
+    
+        
+        //form.pytanie1 = 
+        
+         alert(form.pyt1);
+        
+    }
+    
+    function getEleId(id){
+        return document.getElementById(id); 
+    }
+       
+    </script>
+    </body>
+</html>
