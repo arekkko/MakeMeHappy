@@ -57,5 +57,27 @@ with open('dane.txt') as fp:
   sa.sort()
   for arrayLine in sa:
     print arrayLine
+    
+
+#zad 4 - cos tu nie dziala
+with open('dane.txt') as fp: 
+  i=0
+  for line in fp: 
+    array = []
+    for char in line: 
+      array.append(ord(char))
+    array.sort()
+    temp = array[0]
+    k=0
+    for item in array: 
+      if temp == item-1:
+        if k==0: 
+          k=k+1
+        else:
+          k=k+1
+      temp = item
+    if k > 3:
+      i = i+1
+  print 'takich hasel jest', i
 
       
