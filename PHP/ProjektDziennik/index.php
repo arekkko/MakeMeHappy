@@ -9,17 +9,36 @@
     
 <?php 
 include 'inc/Authorization.php'; 
+
+session_start();
+$user = new Authorization(); 
     
-$logowanie = new Authorization(); 
-    
-$logowanie->login_process('user', 'user');
-    
-if($_SESSION){
-    echo 'Witaj, zalogowałeś się poprawnie'; 
-    
-    echo '<a href="?logout=true">Wyloguj się</a>'; 
-    
+if($user->get_session()){ 
+    include 'template/mainPage.php'; 
+}else{    
+    include 'login.php'; 
 }
+    
+if(isset($_GET['logout']) && $_GET['logout'] == true ){
+    $user->logout_process(); 
+    header("Location: ./");
+}
+    
+if(isset($_GET['login'])){
+    include 'login.php'; 
+}
+    
+if(isset($_GET['loginProcess'])){ 
+    
+    $auth = $user->login_process($_POST['login'], $_POST['password']);
+    
+    if($auth){
+        include 'template/mainPage.php'; 
+    }else{
+        include 'login.php'; 
+    }
+}
+
 ?>
 
 </body>    

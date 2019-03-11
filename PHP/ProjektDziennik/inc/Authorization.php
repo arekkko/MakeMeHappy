@@ -37,7 +37,7 @@ class Authorization {
     
     //Login Process
     public function login_process($login, $password){
-        
+        echo 'Proces logowania'; 
         //$password = md5($password); 
         
         $sql = "SELECT id_osoby FROM nauczyciele WHERE login='${login}' AND password='${password}' UNION SELECT id_osoby FROM uczniowie WHERE login='${login}' AND password='${password}'"; 
@@ -47,15 +47,14 @@ class Authorization {
         
         //get data of query
         $result = mysqli_fetch_assoc($query); 
-        
+
         if($query->num_rows){
-            
             //Login process - success
-            echo 'Dobry uzytkownik';
-            
+            $this->display_success('Witaj, zalogowałeś się poprawnie'); 
+            //session_start();
             $_SESSION['login']   = true; 
             $_SESSION['id_osoby'] = $result['id_osoby'];
-            
+             
             return true;
             
         }else{
@@ -65,15 +64,27 @@ class Authorization {
         }
     }
     
+    //Start session
+    public function get_session(){
+        if(!empty($_SESSION) && $_SESSION['login']){
+            return true;
+        }else{
+            return false; 
+        } 
+    }
+    
     //Logout process
     public function logout_process(){
         $_SESSION['login'] = false; 
-        
         session_destroy(); 
     }
     
     public function display_error($error){
         die("<p class=\"error\">Wystąpił błąd: <strong>${error}</strong>.</p>"); 
         return 0; 
+    }
+    
+    public function display_success($communicat){
+        echo "<span class=\"success\">{$communicat}</span>"; 
     }
 }
