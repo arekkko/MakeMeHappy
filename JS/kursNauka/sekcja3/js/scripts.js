@@ -11,8 +11,10 @@
 
     document.body.appendChild(div);
 
-    div.style.top = options.y + "px";
+    div.style.top = options.y - div.offsetHeight+ "px";
     div.style.left = (options.x + 0.5 * options.w - div.offsetWidth / 2)+ "px";
+
+    div.classList.remove("hidden");
 
     tooltip = div;
   }
@@ -23,6 +25,8 @@
 
     var title = e.target.getAttribute("title");
 
+    e.target.removeAttribute("title");
+
     createTooltip(title, {
       w: e.target.offsetWidth,
       x: e.target.offsetLeft,
@@ -30,9 +34,10 @@
     });
   }
 
-  function hideTooltip(){
+  function hideTooltip(e){
 
-    //tooltip.parentNode.removeChild(tooltip);
+    e.target.setAttribute("title", tooltip.textContent);
+    tooltip.parentNode.removeChild(tooltip);
 
   }
 

@@ -11,3 +11,7 @@ body{
   position: absolute;
   z-index: 9999;
 }
+
+.hidden{
+  display: none; 
+}
