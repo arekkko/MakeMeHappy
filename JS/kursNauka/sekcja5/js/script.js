@@ -11,7 +11,3 @@ Person.prototype.sayHello = function(){
 
 var jan = new Person("Jan", "Kowalski");
 var anna = new Person("Anna", "Kowalska");
-
-anna.sayHello = function(){
-  console.log("Cokolwiek")
-}
